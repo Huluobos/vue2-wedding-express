@@ -8,7 +8,6 @@ router.post('/add/', async (req, res) => {
     var uId = 'logs'
     var imgIndex = '0'
     var type = types
-    var name = name
     var sql = `insert into WISH (uId,type,imgIndex,name,content,cTime) values ('${uId}','${type}','${imgIndex}','${name}','${content.toString()}','${cTime}')`;
     mysqlPool(sql).then(result=>{
         res.json({

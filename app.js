@@ -23,10 +23,9 @@ app.use('/', appPageRouter);
 
 // 路由
 var wishRouter = require('./routes/wish');
-var logsRouter = require('./routes/logs');
 
 app.use('/api/wish', wishRouter);
-app.use('/api/logs', logsRouter);
+
 
 app.all("*", function (req, res, next) {
   //设置允许跨域的域名，*代表允许任意域名跨域
